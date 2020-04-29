@@ -4,10 +4,10 @@ import time
 
 
 class Raspberry():
-    def Take_image():
+    def Image_Capture():
         camera=picamera.PiCamera()
         camera.vflip=True
-        camera.capture('exemple.jpg')
+        camera.capture('test.jpg')
         
     
     def Open_Toll():

@@ -52,15 +52,18 @@ class DB():
         #once the delete function is called , it will work (even there is no userid in db )
         self.db.clients.delete_one({"UserID":UserID})
       
-    def get_userInfo(self):
-        # to identify the  subscriber by his plate number wich has been saved on ocr.txt file
-        f=open("ocr.txt","r")
-        plate_txt=f.read()
+    def get_userInfo(self,plate_txt):
+        
         # query monog db  to find all information about client 
         try:
             result=self.db.clients.find({"PlateNum": plate_txt })
+            
+            
             for res in result:
-                print (" userID: ",res['UserID'], "\n EnterCounter: ",res['EnterCounter'])
+                a=(res['UserID'],res['EnterCounter'])
+                
+               
+            return a
 
         except:
             print("PlateNum not fount")

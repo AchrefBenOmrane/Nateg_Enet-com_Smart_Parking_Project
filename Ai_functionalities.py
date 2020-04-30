@@ -6,7 +6,7 @@ class Detection():
         
         pass
 
-    def plate_detection(self):
+    def plate_detection(self,img):
         dimention=()
         return dimention #tuple for positioning where we'll crop the img
 
@@ -19,6 +19,13 @@ class Detection():
         f=open("ocr.txt","w")
         f.write(ocr_txt)
         f.close()
+        
+    def main_ai(self,img):
+        dim=self.plate_detection(img)
+        img_cropped=self.crop(dim)
+        self.Ocr(img_cropped)
+        
+        
 
 
         

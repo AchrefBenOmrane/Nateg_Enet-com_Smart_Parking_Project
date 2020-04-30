@@ -1,4 +1,4 @@
-
+#import library
 from Ai_functionalities import Detection
 from DB_Manipulation import DB
 from Web_functionalies import Web_Api

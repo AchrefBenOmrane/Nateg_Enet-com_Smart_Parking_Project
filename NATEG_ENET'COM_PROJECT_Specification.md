@@ -37,20 +37,20 @@ The detection of the number plate and process the image for Electronic Tollgate
 Collection (ETC) system may be achieved in both hardware and software by the
 following stapes.
 
-i. The camera is placed short distance ahead the vehicle or truck and capture the
+1. The camera is placed short distance ahead the vehicle or truck and capture the
 image of the number plate fixed on the vehicle by infrared radiations managed
 by camera with its built-in software.
 
-ii. As the vehicle enters and settles in the field of the sensor (Camera). Through
+2. As the vehicle enters and settles in the field of the sensor (Camera). Through
 the infrared sensor (built-in camera) sense a vehicle and gives a signal to the PC
 through microcontroller to capture the number plate image of the vehicle and
 process it.
 
-iii. The number plate is then compared to the authorized number in database to
+3. The number plate is then compared to the authorized number in database to
 confirm its validity and finally provides signal to microcontroller to control the
 system hardware.
 
-iv. The integrated ETC system equipment with software part for the registered
+4. The integrated ETC system equipment with software part for the registered
 vehicles to a database allow the system to perform the following task;
 
 ✓ Check if the vehicle is registered or not.
@@ -59,9 +59,11 @@ vehicles to a database allow the system to perform the following task;
 ✓ Notify the Driver (owner) if vehicle not registered, amount not
 enough.
 
-v. The system will perform the tasks as signal sent from or to microprocessor to
+5. The system will perform the tasks as signal sent from or to microprocessor to
 either open the tollgate or warning signal for amount top-up or unregistered
 vehicle detection.
+
+![Project _Architecture](https://user-images.githubusercontent.com/54064593/80898181-29262380-8cc6-11ea-9e86-867e81ca7b58.jpg)
 
 ### Processing and Recognition Phase:
 Image acquisition is done by the USB Sensing camera which captures the image

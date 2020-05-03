@@ -81,12 +81,12 @@ It will contain two interfaces one for the client and the other for the Master W
 This platform will facilitate the interaction with a client.
 Throw this platform a client can:
 
-1) Buy one of our available membership
-2) Check his balance
-3) Register to our system
-4)Visualize his history of payment
-5)Manage and setting his account
-6)Read messages (Why he was unable to access to a parking)
+1. Buy one of our available membership
+2. Check his balance
+3. Register to our system
+4. Visualize his history of payment
+5. Manage and setting his account
+6. Read messages (Why he was unable to access to a parking)
 
 On the other side the admin will verify and manage all registered accounts
 But his main role is to approve and activate the account of a new client after

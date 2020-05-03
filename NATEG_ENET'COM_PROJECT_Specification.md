@@ -1,6 +1,6 @@
 # Nateg_Enet-com_Smart_Parking_Project 
 
-![nate](https://user-images.githubusercontent.com/54064593/80898449-1c56ff00-8cc9-11ea-9444-e1015d005621.png)
+![NATEG_ENETCOM_FINAL_LOGO](https://user-images.githubusercontent.com/54064593/80898483-7eafff80-8cc9-11ea-9d38-1cf7917361ad.png)
 
 ### PROJECT : DESIGNING AND IMPLEMENTING A PREPAID SMART RECOGNITION VEHICLES FOR AN ELECTRONIC TOLL SYSTEM
 

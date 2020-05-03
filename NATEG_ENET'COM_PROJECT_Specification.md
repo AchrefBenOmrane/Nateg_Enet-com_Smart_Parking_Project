@@ -97,7 +97,8 @@ In this platform our team will use:
 
  -Angular 8 as a FRONT-END framwork for the front end developing
 - Firebase as a BACK-END to maintain the availability and the scalability of data .
-![Screenshot_2020-05-03 Messenger](https://user-images.githubusercontent.com/54064593/80898314-7a82e280-8cc7-11ea-89bc-3af496590261.png)
+
+
 ![Screenshot_2020-05-03 Messenger(3)](https://user-images.githubusercontent.com/54064593/80898316-7f479680-8cc7-11ea-9f2d-583ea2eba5b4.png)
 ![Screenshot_2020-05-03 Messenger(5)](https://user-images.githubusercontent.com/54064593/80898317-81115a00-8cc7-11ea-8091-5135abf55081.png)
 ![Screenshot_2020-05-03 Messenger(4)](https://user-images.githubusercontent.com/54064593/80898318-82db1d80-8cc7-11ea-9e82-35297fa107b0.png)

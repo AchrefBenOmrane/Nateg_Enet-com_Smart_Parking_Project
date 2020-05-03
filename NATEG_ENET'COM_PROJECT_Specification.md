@@ -1,5 +1,7 @@
 # Nateg_Enet-com_Smart_Parking_Project 
 
+![nate](https://user-images.githubusercontent.com/54064593/80898449-1c56ff00-8cc9-11ea-9444-e1015d005621.png)
+
 ### PROJECT : DESIGNING AND IMPLEMENTING A PREPAID SMART RECOGNITION VEHICLES FOR AN ELECTRONIC TOLL SYSTEM
 
 ### PROBLEMATIC :
@@ -75,6 +77,10 @@ purpose of the pre-processing is to increase the efficiency of character
 recognition which include the set algorithms applied on the images to enhance
 the quality while obtaining the correct characters required. It is an important
 phase in the system.
+
+![cd](https://user-images.githubusercontent.com/54064593/80898407-a81c5b80-8cc8-11ea-84c8-e6cc5eef6f2a.png)
+
+![djpg](https://user-images.githubusercontent.com/54064593/80898411-b36f8700-8cc8-11ea-805e-40e0acda2fbb.png)
 
 ### WEB PLATFORM :
 

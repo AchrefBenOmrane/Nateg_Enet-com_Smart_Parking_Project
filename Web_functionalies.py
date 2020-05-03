@@ -30,9 +30,9 @@ class Web_Api():
     
 
 test=Web_Api('https://web-functionalies-api.firebaseio.com/')
-test.read('subscriber','EnterCounter')
-test.update('subscriber','123456','100')
-test.read('subscriber','EnterCounter')
+test.read('12345678','EnterCounter')
+test.update('12345678','123456','100')
+test.read('12345678','EnterCounter')
     
     
     

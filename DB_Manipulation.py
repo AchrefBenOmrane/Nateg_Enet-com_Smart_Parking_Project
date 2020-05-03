@@ -2,7 +2,7 @@ from pymongo import MongoClient
 from bson.json_util import dumps   ### for visualization data presented on a collection
 
 
-
+#Local DataBase
 class DB():
     def __init__(self ,adress):
         #should be written 'adress:port'

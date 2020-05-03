@@ -4,9 +4,6 @@ import RPi.GPIO as GPIO
 import picamera
 import time
 
-
-
-
 class Raspberry():
     def Image_Capture(self):
         camera=picamera.PiCamera()

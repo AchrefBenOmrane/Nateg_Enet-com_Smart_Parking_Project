@@ -24,7 +24,7 @@ vehicles for different parking systems, this system will have a huge impact
 on management of urban traffic by offering different services such as
 available places at any giving moment , it’s an autonomous system that will
 reduce human interaction with parking systems and it will generates a
-considerable time saving .
+considerable time saving ..
 
 ### Description :
 

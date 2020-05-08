@@ -7,6 +7,17 @@ import time
 from skimage import io
 from tensorflow.lite.python.interpreter import Interpreter
 
+
+
+# We need  to add a function which return a cropped image ( just the plate number)
+# This script detect the shape of the plate 
+# So we need to use these parameters to crop the image 
+# The result will be saved on ocr.txt file 
+
+# This script should be transformed as a function : input image captured from the camera ====> output plate number saved on ocr.txt  
+
+
+
 # Get path to current working directory
 CWD_PATH = os.getcwd()
 # With testing you will know which is the best
@@ -15,7 +26,7 @@ images = 'Image_Test.jpeg'
 # path to model
 PATH_TO_CKPT = os.path.join(CWD_PATH, 'model.tflite')
 labels = 'labelmap.txt'
-#pkg = importlib.util.find_spec('tflite_runtime')
+
 # Have to do a weird fix for label map if using the COCO "starter model" from
 # https://www.tensorflow.org/lite/models/object_detection/overview
 # First label is '???', which has to be removed.

@@ -1,113 +1,30 @@
 # Import packages
 import os
-import argparse
 import cv2
 import numpy as np
 import sys
-import glob
-import importlib.util
 import time
-from skimage import io 
-
-# Define and parse input arguments
-parser = argparse.ArgumentParser()
-parser.add_argument('--modeldir', help='Folder the .tflite file is located in',
-                    required=True)
-parser.add_argument('--graph', help='Name of the .tflite file, if different than detect.tflite',
-                    default='detect.tflite')
-parser.add_argument('--labels', help='Name of the labelmap file, if different than labelmap.txt',
-                    default='labelmap.txt')
-parser.add_argument('--threshold', help='Minimum confidence threshold for displaying detected objects',
-                    default=0.5)
-parser.add_argument('--image', help='Name of the single image to perform detection on. To run detection on multiple images, use --imagedir',
-                    default=None)
-parser.add_argument('--imagedir', help='Name of the folder containing images to perform detection on. Folder must contain only images.',
-                    default=None)
-parser.add_argument('--edgetpu', help='Use Coral Edge TPU Accelerator to speed up detection',
-                    action='store_true')
-
-args = parser.parse_args()
-
-MODEL_NAME = args.modeldir
-GRAPH_NAME = args.graph
-LABELMAP_NAME = args.labels
-min_conf_threshold = float(args.threshold)
-use_TPU = args.edgetpu
-
-# Parse input image name and directory.
-IM_NAME = args.image
-IM_DIR = args.imagedir
-
-# If both an image AND a folder are specified, throw an error
-if (IM_NAME and IM_DIR):
-    print('Error! Please only use the --image argument or the --imagedir argument, not both. Issue "python TFLite_detection_image.py -h" for help.')
-    sys.exit()
-
-
-# Import TensorFlow libraries
-# If tflite_runtime is installed, import interpreter from tflite_runtime, else import from regular tensorflow
-# If using Coral Edge TPU, import the load_delegate library
-pkg = importlib.util.find_spec('tflite_runtime')
-if pkg:
-    from tflite_runtime.interpreter import Interpreter
-    if use_TPU:
-        from tflite_runtime.interpreter import load_delegate
-else:
-    from tensorflow.lite.python.interpreter import Interpreter
-    if use_TPU:
-        from tensorflow.lite.python.interpreter import load_delegate
-
-# If using Edge TPU, assign filename for Edge TPU model
-if use_TPU:
-    # If user has specified the name of the .tflite file, use that name, otherwise use default 'edgetpu.tflite'
-    if (GRAPH_NAME == 'detect.tflite'):
-        GRAPH_NAME = 'edgetpu.tflite'
-
+from skimage import io
+from tensorflow.lite.python.interpreter import Interpreter
 
 # Get path to current working directory
 CWD_PATH = os.getcwd()
-
-# Define path to images and grab all image filenames
-# if IM_DIR:
-#    PATH_TO_IMAGES = os.path.join(CWD_PATH,IM_DIR)
-#    images = glob.glob(PATH_TO_IMAGES + '/*')
-
-# elif IM_NAME:
-#PATH_TO_IMAGES = os.path.join(CWD_PATH, IM_NAME)
-#images = glob.glob(PATH_TO_IMAGES)
-
-
-images='/root/Desktop/Whole_Project/Tflite/model_tflite/52.jpeg'
-
-print(images)
-
-# Path to .tflite file, which contains the model that is used for object detection
-PATH_TO_CKPT = os.path.join(CWD_PATH, MODEL_NAME, GRAPH_NAME)
-
-
-# Path to label map file
-PATH_TO_LABELS = os.path.join(CWD_PATH, MODEL_NAME, LABELMAP_NAME)
-
-# Load the label map
-# with open(PATH_TO_LABELS, 'r') as f:
-#    labels = [line.strip() for line in f.readlines()]
+# With testing you will know which is the best
+min_conf_threshold = 0.6
+images = 'Image_Test.jpeg'
+# path to model
+PATH_TO_CKPT = os.path.join(CWD_PATH, 'model.tflite')
 labels = 'labelmap.txt'
-
+#pkg = importlib.util.find_spec('tflite_runtime')
 # Have to do a weird fix for label map if using the COCO "starter model" from
 # https://www.tensorflow.org/lite/models/object_detection/overview
 # First label is '???', which has to be removed.
+
 if labels[0] == '???':
     del(labels[0])
 
 # Load the Tensorflow Lite model.
-# If using Edge TPU, use special load_delegate argument
-if use_TPU:
-    interpreter = Interpreter(model_path=PATH_TO_CKPT,
-                              experimental_delegates=[load_delegate('libedgetpu.so.1.0')])
-    print(PATH_TO_CKPT)
-else:
-    interpreter = Interpreter(model_path=PATH_TO_CKPT)
-
+interpreter = Interpreter(model_path=PATH_TO_CKPT)
 interpreter.allocate_tensors()
 
 # Get model details
@@ -189,3 +106,4 @@ for image_path in images:
 # Clean up
 cv2.destroyAllWindows()
 print("Average detection time {} seconds".format(total_time/len(images)))
+

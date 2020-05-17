@@ -86,6 +86,7 @@ phase in the system.
 
 ### WEB PLATFORM :
 
+https://smart-parking-nateg.firebaseapp.com
 
 It will contain two interfaces one for the client and the other for the Master Web
 This platform will facilitate the interaction with a client.

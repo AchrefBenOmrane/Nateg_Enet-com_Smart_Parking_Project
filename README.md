@@ -4,7 +4,7 @@
 
 # Nateg_Enet-com_Smart_Parking_Project 
 
-### PROJECT : DESIGNING AND IMPLEMENTING A PREPAID SMART RECOGNITION VEHICLES FOR AN ELECTRONIC TOLL SYSTEM using Raspberry Pi 4
+### PROJECT :  Prepaid smart recognition of vehicles for different parking systems using Raspberry Pi 4
 
 ### PROBLEMATIC :
 
